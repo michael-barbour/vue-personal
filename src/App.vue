@@ -4,7 +4,7 @@
       <b-col cols="12" md="3">
         <div class="bd-sidebar px-5 mb-5">
           <b-img src="@/assets/headshot.png" fluid rounded="" />
-          <dl class="text-left">
+          <dl class="pt-3 text-left">
             <dt>Age</dt>
             <dd>{{ age }}</dd>
 
@@ -17,11 +17,14 @@
             <dt>Phone</dt>
             <dd>(919) 559-2676</dd>
           </dl>
+          <div class="text-left">
+            <a href="https://www.github.com/michael-barbour" target="_blank"><b-icon icon="github" /></a>
+          </div>
         </div>
       </b-col>
       <b-col class="text-left">
         <h1 class="text-primary">Michael Barbour</h1>
-        <div class="m-5">
+        <div class="m-3 mb-5">
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas semper ut quam vitae pulvinar. Praesent
             vel ipsum tortor. Nullam turpis tortor, gravida vitae quam ac, accumsan commodo nisi. Nullam tortor sem,
@@ -64,10 +67,10 @@
             facilisi.
           </p>
         </div>
-        <h1 class="text-primary"> Work History</h1>
-        <div class="m-5">
+        <h1 class="text-primary">Work History</h1>
+        <div class="m-3 mb-5">
           <div class="d-flex align-items-center justify-content-between">
-            <h2>GDIT</h2>
+            <h2>GDIT <a href="https://www.gdit.com/" target="_blank"><b-icon icon="link45deg" /></a></h2>
             <span>November 2019 - Present</span>
           </div>
           <p>Contractor for the EPA through General Dynamics IT.</p>
@@ -78,26 +81,28 @@
           </ul>
 
           <div class="d-flex align-items-center justify-content-between">
-            <h2>CastleBranch</h2>
+            <h2>CastleBranch <a href="https://discover.castlebranch.com/" target="_blank"><b-icon icon="link45deg" /></a></h2>
             <span>March 2017 - November 2019</span>
           </div>
-          <p>Contractor for the EPA through General Dynamics IT.</p>
+          <p>Developer working on client-focused background check Web Applications</p>
           <ul>
-            <li>Worked with tools including: Django, Flask, Javascript, VueJS, Elasticsearch/ELK, MySQL, PostgreSQL, Docker, Docker-Compose, JsonApi.</li>
-            <li>Took an active part in the Agile lifecycle of a project as a developer. Duties including: Daily Scrum, Pointing/Grooming of User Stories, Sprint Retrospectives and Planning.</li>
-            <li>Coded and reviewed both front-end, back-end, and dev-ops user stories to the requested acceptance criteria.  Requested guidance from PO when requests were unclear.</li>
+            <li>Develop code for LAMP and LAPP stack web applications.</li>
+            <li>Code within the Laravel framework as well as frameworkless legacy PHP.</li>
+            <li>Follow established design patterns such as MVC, Eloquent, CRUD REST/API.</li>
+            <li>Adapt to working on new code bases with minimal guidance.</li>
+            <li>Fix code and data bugs both on the front and back end.</li>
           </ul>
         </div>
         <h1 class="text-primary">Education</h1>
-        <div class="m-5">
+        <div class="m-3 mb-5">
           <div class="d-flex align-items-center justify-content-between">
             <h2>University of North Carolina - Wilmington</h2>
             <span>May 2016</span>
           </div>
           <p>Graduated with a Bachelor of Science in computer science</p>
         </div>
-        <h1 class="text-primary">Github</h1>
-        <div class="m-5">
+        <h1 class="text-primary">Projects</h1>
+        <div class="m-3 mb-5">
         </div>
       </b-col>
     </b-row>
