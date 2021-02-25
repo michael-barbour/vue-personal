@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Hello,  I am <span class="text-primary">Michael Barbour</span></h1>
+    <h1>Hello, I am <span class="text-primary">Michael Barbour</span></h1>
     <div class="m-3 mb-5">
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas semper ut quam vitae pulvinar. Praesent
