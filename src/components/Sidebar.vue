@@ -6,20 +6,24 @@
       <dd>{{ age }}</dd>
 
       <dt>Location</dt>
-      <dd>Durham, North Carolina</dd>
+      <!--Break on North Carolina-->
+      <dd>Durham, <span style="white-space: nowrap">North Carolina</span></dd>
 
       <dt>Email</dt>
-      <dd class="d-flex flex-wrap">
-        <!--Divs for Word Wrapping-->
-        <div>michaelbarbour163</div>
-        <div>@gmail.com</div>
+      <dd>
+        michaelbarbour163<wbr>@gmail.com
       </dd>
 
       <dt>Phone</dt>
       <dd>(919) 559-2676</dd>
     </dl>
     <div class="text-left">
-      <a href="https://www.github.com/michael-barbour" target="_blank"><b-icon icon="github" /></a>
+      <a class="p-2" href="https://www.github.com/michael-barbour" target="_blank">
+        <b-icon icon="github" font-scale="2"/>
+      </a>
+      <a class="p-2" href="mailto:michaelbarbour163@gmail.com">
+        <b-icon icon="mailbox" font-scale="2"/>
+      </a>
     </div>
   </div>
 </template>
