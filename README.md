@@ -1,5 +1,7 @@
 # vue_personal
 
+This is a personal resume built on vue, mostly for practice's sake.
+
 ## Project setup
 ```
 npm install
