@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-5">
+  <div>
     <h1>Hello, I am <span class="text-primary">Michael Barbour</span></h1>
     <div class="m-3 mb-5">
       <p>

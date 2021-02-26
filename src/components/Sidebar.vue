@@ -50,5 +50,8 @@ export default {
   position: sticky;
   top: 4rem;
   z-index: 1000;
+  border-radius: 1rem;
+  background-color: var(--light);
+  padding: 2rem;
 }
 </style>

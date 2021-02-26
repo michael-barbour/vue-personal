@@ -15,7 +15,7 @@
     <div v-if="entry.technologies" class="mb-3">
       <h4>Technologies</h4>
       <div class="d-flex flex-wrap mx-3">
-        <skill-badge v-for="tech in entry.technologies" :key="tech" :text="tech" variant="primary" class="mx-1" />
+        <skill-badge v-for="tech in entry.technologies" :key="tech" :text="tech" variant="secondary" class="mx-1" />
       </div>
     </div>
 

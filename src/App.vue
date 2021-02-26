@@ -1,10 +1,10 @@
 <template>
   <div id="app" class="container-fluid">
     <b-row>
-      <b-col cols="12" md="3" offset-md="1" class="bg-light">
+      <b-col cols="12" md="3" offset-md="1">
         <sidebar/>
       </b-col>
-      <b-col md="7" class="text-left bg-light">
+      <b-col md="7" class="bg-light text-left p-4">
         <profile/>
         <experience/>
         <projects/>
