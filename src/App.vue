@@ -1,10 +1,10 @@
 <template>
   <div id="app" class="container-fluid">
     <b-row>
-      <b-col cols="12" md="3" offset-md="1">
+      <b-col cols="12" md="3" offset-md="1" class="bg-light">
         <sidebar/>
       </b-col>
-      <b-col md="7" class="text-left">
+      <b-col md="7" class="text-left bg-light">
         <profile/>
         <experience/>
         <projects/>
@@ -39,7 +39,7 @@ export default {
   text-align: center;
   color: #1f2d39;
   padding-top: 60px;
-  background: #eeeeee;
+  background: #3d3d3d;
   min-height: 100vh;
 }
 </style>

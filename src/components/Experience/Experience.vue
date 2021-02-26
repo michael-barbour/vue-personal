@@ -19,6 +19,19 @@ export default {
         {
           name: "GDIT",
           description: "Contractor for the EPA through General Dynamics Information Technology.",
+          technologies: [
+            "django",
+            "flask",
+            "python",
+            "docker",
+            "docker-compose",
+            "vue",
+            "javascript",
+            "postgres",
+            "mysql",
+            "elasticsearch",
+            "git"
+          ],
           bullets: [
             "Worked with tools including: Django, Flask, Javascript, VueJS, Elasticsearch/ELK, MySQL, PostgreSQL, Docker, Docker-Compose, JsonApi.",
             "Took an active part in the Agile lifecycle of a project as a developer. Duties including: Daily Scrum, Pointing/Grooming of User Stories, Sprint Retrospectives and Planning.",
@@ -74,7 +87,7 @@ ul.timeline {
  /* Timeline vertical line */
 ul.timeline:before {
     content: ' ';
-    background: #fff;
+    background: var(--secondary);
     display: inline-block;
     position: absolute;
     left: 16px;
