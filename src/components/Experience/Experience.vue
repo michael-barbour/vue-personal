@@ -1,21 +1,21 @@
 <template>
   <div>
-    <h1 class="text-primary">Work History</h1>
-    <div class="m-3 mb-5">
-      <work-history-entry v-for="job in jobs" :key="job.name" :job="job"/>
-    </div>
+    <h1 class="text-primary">Experience</h1>
+    <ul class="mb-5 timeline">
+      <experience-entry v-for="entry in experiences" :key="entry.name" :entry="entry"/>
+    </ul>
   </div>
 </template>
 
 <script>
-import WorkHistoryEntry from "@/components/WorkHistory/WorkHistoryEntry";
+import ExperienceEntry from "@/components/Experience/ExperienceEntry";
 
 export default {
-  name: "WorkHistory",
-  components: {WorkHistoryEntry},
+  name: "Experience",
+  components: { ExperienceEntry },
   data() {
     return {
-      jobs: [
+      experiences: [
         {
           name: "GDIT",
           description: "Contractor for the EPA through General Dynamics Information Technology.",
@@ -42,6 +42,12 @@ export default {
           endDate: "November 2019",
           url: "https://discover.castlebranch.com/"
         },
+        {
+          name: "University of North Carolina - Wilmington",
+          description: "Bachelor of Science in Computer Science",
+          endDate: "Graduated May 2016",
+          url: "https://uncw.edu"
+        },
       ]
     }
   }
@@ -49,5 +55,33 @@ export default {
 </script>
 
 <style scoped>
+
+/*
+*
+* ==========================================
+* CUSTOM UTIL CLASSES
+* ==========================================
+*
+*/
+
+/* Timeline holder */
+ul.timeline {
+    list-style-type: none;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+ /* Timeline vertical line */
+ul.timeline:before {
+    content: ' ';
+    background: #fff;
+    display: inline-block;
+    position: absolute;
+    left: 16px;
+    width: 4px;
+    height: 100%;
+    z-index: 400;
+    border-radius: 1rem;
+}
 
 </style>

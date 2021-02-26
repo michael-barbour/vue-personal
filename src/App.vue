@@ -6,8 +6,7 @@
       </b-col>
       <b-col md="7" class="text-left">
         <profile/>
-        <work-history/>
-        <education/>
+        <experience/>
         <projects/>
       </b-col>
     </b-row>
@@ -18,16 +17,14 @@
 
 import Sidebar from "@/components/Sidebar";
 import Profile from "@/components/Profile/Profile";
-import WorkHistory from "@/components/WorkHistory/WorkHistory";
-import Education from "@/components/Education/Education";
+import Experience from "@/components/Experience/Experience";
 import Projects from "@/components/Project/Project";
 
 export default {
   name: 'App',
   components: {
     Projects,
-    Education,
-    WorkHistory,
+    Experience,
     Profile,
     Sidebar
   }
@@ -40,8 +37,9 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #1f2d39;
   padding-top: 60px;
-  background-color: aliceblue;
+  background: #eeeeee;
+  min-height: 100vh;
 }
 </style>
