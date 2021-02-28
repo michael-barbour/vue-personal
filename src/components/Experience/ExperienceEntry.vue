@@ -1,32 +1,35 @@
 <template>
-  <li class="timeline-item bg-white rounded ml-3 p-4 shadow">
+  <li class="timeline-item bg-white rounded ml-3 p-4 shadow" @click="toggleDetails()">
     <div class="timeline-arrow"></div>
-
-    <p v-if="entry.startDate && entry.endDate">{{ entry.startDate }} - {{ entry.endDate }}</p>
-    <p v-else>{{ entry.endDate }}</p>
 
     <h2>{{ entry.name }} <a :href="entry.url" target="_blank">
       <b-icon icon="link45deg"/>
     </a></h2>
 
-    <p v-if="entry.bullets">{{ entry.description }}</p>
-    <span v-else>{{ entry.description }}</span>
+    <h4 v-if="entry.startDate && entry.endDate" class="mb-0">
+      {{ entry.startDate }} - {{ entry.endDate }}
+    </h4>
+    <h4 v-else class="mb-0">{{ entry.endDate }}</h4>
 
-    <div v-if="entry.technologies" class="mb-3">
-      <h4>Technologies</h4>
-      <div class="d-flex flex-wrap mx-3">
-        <skill-badge v-for="tech in entry.technologies" :key="tech" :text="tech" variant="secondary" class="mx-1" />
+    <b-collapse v-model="visible">
+      <div class="mt-3">{{ entry.description }}</div>
+
+      <div v-if="entry.technologies" class="my-3">
+        <h4>Technologies</h4>
+        <div class="d-flex flex-wrap mx-3">
+          <skill-badge v-for="tech in entry.technologies" :key="tech" :text="tech" variant="secondary" class="mx-1" />
+        </div>
       </div>
-    </div>
 
-    <div v-if="entry.bullets">
-      <h4>Responsibilities</h4>
-      <ul>
-        <li v-for="bullet in entry.bullets" :key="bullet">
-          {{ bullet }}
-        </li>
-      </ul>
-    </div>
+      <div v-if="entry.bullets" class="mt-3">
+        <h4>Responsibilities</h4>
+        <ul>
+          <li v-for="bullet in entry.bullets" :key="bullet">
+            {{ bullet }}
+          </li>
+        </ul>
+      </div>
+    </b-collapse>
   </li>
 </template>
 
@@ -36,7 +39,17 @@ import SkillBadge from "@/components/SkillBadge";
 export default {
   name: "ExperienceEntry",
   props: ["entry"],
-  components: { SkillBadge }
+  components: { SkillBadge },
+  data() {
+    return {
+      visible: false
+    }
+  },
+  methods:{
+    toggleDetails: function() {
+      this.visible = !this.visible
+    }
+  }
 }
 </script>
 
@@ -44,12 +57,13 @@ export default {
 
 li.timeline-item {
     margin: 20px 0;
+    border: 3px solid var(--secondary);
 }
 
 /* Timeline item arrow */
 .timeline-arrow {
     border-top: 0.5rem solid transparent;
-    border-right: 0.5rem solid #fff;
+    border-right: 0.5rem solid var(--secondary);
     border-bottom: 0.5rem solid transparent;
     display: block;
     position: absolute;
@@ -59,7 +73,7 @@ li.timeline-item {
 /* Timeline item circle marker */
 li.timeline-item::before {
     content: ' ';
-    background: #939393;
+    background: var(--secondary);
     display: inline-block;
     position: absolute;
     border-radius: 50%;
@@ -68,7 +82,6 @@ li.timeline-item::before {
     width: 14px;
     height: 14px;
     z-index: 400;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
 </style>

@@ -2,7 +2,7 @@
   <div>
     <h1 class="text-primary">Experience</h1>
     <ul class="mb-5 timeline">
-      <experience-entry v-for="entry in experiences" :key="entry.name" :entry="entry"/>
+      <experience-entry v-for="entry in experiences" :key="entry.id" :entry="entry"/>
     </ul>
   </div>
 </template>
@@ -17,6 +17,7 @@ export default {
     return {
       experiences: [
         {
+          id: 1,
           name: "GDIT",
           description: "Contractor for the EPA through General Dynamics Information Technology.",
           technologies: [
@@ -42,6 +43,7 @@ export default {
           url: "https://www.gdit.com/"
         },
         {
+          id: 2,
           name: "CastleBranch",
           description: "Developer working on client-focused background check Web Applications",
           bullets: [
@@ -56,6 +58,7 @@ export default {
           url: "https://discover.castlebranch.com/"
         },
         {
+          id: 3,
           name: "University of North Carolina - Wilmington",
           description: "Bachelor of Science in Computer Science",
           endDate: "Graduated May 2016",
