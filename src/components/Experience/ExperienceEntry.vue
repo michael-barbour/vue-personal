@@ -2,27 +2,27 @@
   <li class="timeline-item bg-white rounded ml-3 p-4 shadow" @click="toggleDetails()">
     <div class="timeline-arrow"></div>
 
-    <h2>{{ entry.name }} <a :href="entry.url" target="_blank">
+    <h4>{{ entry.name }} <a :href="entry.url" target="_blank">
       <b-icon icon="link45deg"/>
-    </a></h2>
+    </a></h4>
 
-    <h4 v-if="entry.startDate && entry.endDate" class="mb-0">
+    <h6 v-if="entry.startDate && entry.endDate" class="mb-0">
       {{ entry.startDate }} - {{ entry.endDate }}
-    </h4>
-    <h4 v-else class="mb-0">{{ entry.endDate }}</h4>
+    </h6>
+    <h6 v-else class="mb-0">{{ entry.endDate }}</h6>
 
     <b-collapse v-model="visible">
       <div class="mt-3">{{ entry.description }}</div>
 
       <div v-if="entry.technologies" class="my-3">
-        <h4>Technologies</h4>
+        <h5>Technologies</h5>
         <div class="d-flex flex-wrap mx-3">
           <skill-badge v-for="tech in entry.technologies" :key="tech" :text="tech" variant="secondary" class="mx-1" />
         </div>
       </div>
 
       <div v-if="entry.bullets" class="mt-3">
-        <h4>Responsibilities</h4>
+        <h5>Responsibilities</h5>
         <ul>
           <li v-for="bullet in entry.bullets" :key="bullet">
             {{ bullet }}
@@ -57,8 +57,7 @@ export default {
 
 li.timeline-item {
     margin: 20px 0;
-    border: 3px solid var(--secondary);
-}
+ }
 
 /* Timeline item arrow */
 .timeline-arrow {
