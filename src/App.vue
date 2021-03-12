@@ -1,13 +1,13 @@
 <template>
-  <div id="app" class="container-fluid">
+  <div id="app">
     <b-row>
-      <b-col cols="12" md="3" offset-md="1">
+      <b-col cols="12" md="3" lg="2" offset-md="1">
         <sidebar/>
       </b-col>
-      <b-col md="7" class="bg-light text-left p-4">
-        <profile/>
-        <experience/>
-        <projects/>
+      <b-col md="7" lg="8" class="text-left">
+        <profile class="bg-light p-4 mb-5"/>
+        <experience class="bg-light p-4 mb-5"/>
+        <projects class="bg-light p-4 mb-5"/>
       </b-col>
     </b-row>
   </div>

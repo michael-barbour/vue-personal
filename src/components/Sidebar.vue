@@ -1,13 +1,10 @@
 <template>
   <div class="sidebar-cstm mb-5">
-    <b-img src="@/assets/headshot.png" fluid rounded="" />
-    <dl class="pt-3 text-left">
-      <dt>Age</dt>
-      <dd>{{ age }}</dd>
-
+    <b-img src="@/assets/headshot.png" fluid />
+    <dl class="pt-3 text-left text-break">
       <dt>Location</dt>
       <!--Break on North Carolina-->
-      <dd>Durham, <span style="white-space: nowrap">North Carolina</span></dd>
+      <dd>Durham, <wbr>North Carolina</dd>
 
       <dt>Email</dt>
       <dd>
@@ -22,7 +19,7 @@
         <b-icon icon="github" font-scale="2"/>
       </a>
       <a class="p-2" href="mailto:michaelbarbour163@gmail.com">
-        <b-icon icon="mailbox" font-scale="2"/>
+        <b-icon icon="envelope" font-scale="2"/>
       </a>
     </div>
   </div>
@@ -31,13 +28,6 @@
 <script>
 export default {
   name: "Sidebar",
-  computed: {
-    age: function () {
-      let now = Date.now()
-      let bday = new Date(1992, 11, 18)
-      return new Date(now - bday).getFullYear() - 1970
-    }
-  }
 }
 </script>
 
@@ -48,9 +38,8 @@ export default {
   flex: 0 1 320px;
   position: -webkit-sticky;
   position: sticky;
-  top: 4rem;
+  top: 40px;
   z-index: 1000;
-  border-radius: 1rem;
   background-color: var(--light);
   padding: 2rem;
 }

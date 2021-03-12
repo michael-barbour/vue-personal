@@ -2,9 +2,13 @@
   <li class="timeline-item bg-white rounded ml-3 p-4 shadow" @click="toggleDetails()">
     <div class="timeline-arrow"></div>
 
-    <h4>{{ entry.name }} <a :href="entry.url" target="_blank">
-      <b-icon icon="link45deg"/>
-    </a></h4>
+    <div class="d-flex justify-content-between">
+      <h4>{{ entry.name }} <a :href="entry.url" target="_blank">
+        <b-icon icon="link45deg"/>
+      </a></h4>
+
+      <b-icon :icon="visible ? 'chevron-up' : 'chevron-down'"/>
+    </div>
 
     <h6 v-if="entry.startDate && entry.endDate" class="mb-0">
       {{ entry.startDate }} - {{ entry.endDate }}
