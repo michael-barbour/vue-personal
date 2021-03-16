@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 class="text-primary">
+    <h1 class="text-primary overflow-auto">
       Experience
     </h1>
     <ul class="mb-5 timeline">
@@ -24,6 +24,7 @@ export default {
       experiences: [
         {
           id: 1,
+          collapse: true,
           name: "GDIT",
           description: "Contractor for the EPA through General Dynamics Information Technology.",
           technologies: [
@@ -50,6 +51,7 @@ export default {
         },
         {
           id: 2,
+          collapse: true,
           name: "CastleBranch",
           description: "Developer working on client-focused background check Web Applications",
           bullets: [
@@ -65,6 +67,7 @@ export default {
         },
         {
           id: 3,
+          collapse: false,
           name: "University of North Carolina - Wilmington",
           description: "Bachelor of Science in Computer Science",
           endDate: "Graduated May 2016",

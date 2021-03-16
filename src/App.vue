@@ -1,8 +1,37 @@
 <template>
   <b-container id="app">
-    <profile class="bg-light p-4 mb-5" />
-    <experience class="bg-light p-4 mb-5" />
-    <projects class="bg-light p-4 mb-5" />
+    <b-row
+      class="bg-white p-4"
+      style="height: 850px"
+    >
+      <b-col cols="5">
+        <sidebar />
+      </b-col>
+      <b-col>
+        <b-tabs>
+          <b-tab
+            title="Profile"
+            class="p-4"
+            active
+          >
+            <profile />
+          </b-tab>
+          <b-tab
+            title="Experience"
+            class="p-4 overflow-auto"
+            style="height: 754px"
+          >
+            <experience />
+          </b-tab>
+          <b-tab
+            title="Projects"
+            class="p-4"
+          >
+            <projects />
+          </b-tab>
+        </b-tabs>
+      </b-col>
+    </b-row>
   </b-container>
 </template>
 
@@ -11,10 +40,12 @@
 import Profile from "@/components/Profile/Profile";
 import Experience from "@/components/Experience/Experience";
 import Projects from "@/components/Project/Project";
+import Sidebar from "@/components/Sidebar";
 
 export default {
   name: 'App',
   components: {
+    Sidebar,
     Projects,
     Experience,
     Profile,
