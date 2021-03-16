@@ -1,34 +1,67 @@
 <template>
-  <li class="timeline-item bg-white rounded ml-3 p-4 shadow" @click="toggleDetails()">
-    <div class="timeline-arrow"></div>
+  <li
+    class="timeline-item bg-white rounded ml-3 p-4 shadow"
+    @click="toggleDetails()"
+  >
+    <div class="timeline-arrow" />
 
     <div class="d-flex justify-content-between">
-      <h4>{{ entry.name }} <a :href="entry.url" target="_blank">
-        <b-icon icon="link45deg"/>
-      </a></h4>
+      <h4>
+        {{ entry.name }} <a
+          :href="entry.url"
+          target="_blank"
+        >
+          <b-icon icon="link45deg" />
+        </a>
+      </h4>
 
-      <b-icon :icon="visible ? 'chevron-up' : 'chevron-down'"/>
+      <b-icon :icon="visible ? 'chevron-up' : 'chevron-down'" />
     </div>
 
-    <h6 v-if="entry.startDate && entry.endDate" class="mb-0">
+    <h6
+      v-if="entry.startDate && entry.endDate"
+      class="mb-0"
+    >
       {{ entry.startDate }} - {{ entry.endDate }}
     </h6>
-    <h6 v-else class="mb-0">{{ entry.endDate }}</h6>
+    <h6
+      v-else
+      class="mb-0"
+    >
+      {{ entry.endDate }}
+    </h6>
 
     <b-collapse v-model="visible">
-      <div class="mt-3">{{ entry.description }}</div>
+      <div class="mt-3">
+        {{ entry.description }}
+      </div>
 
-      <div v-if="entry.technologies" class="my-3">
+      <div
+        v-if="entry.technologies"
+        class="my-3"
+      >
         <h5>Technologies</h5>
         <div class="d-flex flex-wrap mx-3">
-          <skill-badge v-for="tech in entry.technologies" :key="tech" :text="tech" variant="secondary" class="mx-1" />
+          <skill-badge
+            v-for="tech in entry.technologies"
+            :key="tech"
+            :text="tech"
+            variant="secondary"
+            class="mx-1"
+          />
         </div>
       </div>
 
-      <div v-if="entry.bullets" class="mt-3">
+      <div
+        v-if="entry.bullets"
+        class="mt-3"
+      >
         <h5>Responsibilities</h5>
         <ul>
-          <li v-for="bullet in entry.bullets" :key="bullet">
+          <li
+            v-for="bullet in entry.bullets"
+            :key="bullet"
+          >
             {{ bullet }}
           </li>
         </ul>
@@ -42,8 +75,8 @@ import SkillBadge from "@/components/SkillBadge";
 
 export default {
   name: "ExperienceEntry",
-  props: ["entry"],
   components: { SkillBadge },
+  props: {"entry": {type: Object, default: () => { return {} }}},
   data() {
     return {
       visible: false

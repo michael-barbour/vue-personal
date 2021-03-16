@@ -1,8 +1,14 @@
 <template>
   <div>
-    <h1 class="text-primary">Experience</h1>
+    <h1 class="text-primary">
+      Experience
+    </h1>
     <ul class="mb-5 timeline">
-      <experience-entry v-for="entry in experiences" :key="entry.id" :entry="entry"/>
+      <experience-entry
+        v-for="entry in experiences"
+        :key="entry.id"
+        :entry="entry"
+      />
     </ul>
   </div>
 </template>
