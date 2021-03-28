@@ -1,7 +1,7 @@
 <template>
   <div class="mb-5">
     <b-img
-      src="@/assets/headshot.png"
+      src="@/assets/headshot.jpg"
       fluid
     />
     <dl class="pt-3 text-left text-break">
